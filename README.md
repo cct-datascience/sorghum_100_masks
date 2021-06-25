@@ -15,10 +15,6 @@ export KAGGLE_KEY=xxxxxxxxxxxxxx
 kaggle competitions download -c sorghum-biomass-prediction
 ```
 
-there are 
-* 277,327 training images
-* 19,442 testing 
-* 324,927 total images
 
 
 ```sh
@@ -35,6 +31,12 @@ To count / check progress:
 find . -name *.png | grep -v mask | wc -l
 find . -name mask.png  | wc -l
 ```
+
+
+there are 
+* 277,327 training images (according to Kaggle)
+* 19,442 testing images (according to Kaggle)
+* 324,927 total images (according to `find` + `wc`)
 
 To get canopy cover:
 
