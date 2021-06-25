@@ -11,6 +11,7 @@
     "version": "0.1",
     "description": "Creates masks for https://www.kaggle.com/c/sorghum-biomass-prediction/overview/iccv-2021-cvppa",
     "applicationCategory": "computer vision, phenomics",
+    "developmentStatus": "concept",
     "isPartOf": "https://terraref.org",
     "keywords": [
         "sorghum",
