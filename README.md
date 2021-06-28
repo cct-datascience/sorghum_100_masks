@@ -57,6 +57,17 @@ do
 done 
 ```
 
+The canopy cover value goes from 0 = no plants to 1 = all plants / no soil. The file is structured with the file name followed by the canopy cover value. Sometimes it appears there are two file names in a row (in which case I suspect the first file threw an error but haven't dug in). 
+
+It looks like:
+
+```
+"file","2017-07-26__14-09-58-726.png"
+"ratio",0.8977560763888889
+"file","2017-07-28__12-17-30-214.png"
+"ratio",0.9705598958333334
+"file","2017-07-28__14-30-12-822.png"
+```
 
 ### References
 
