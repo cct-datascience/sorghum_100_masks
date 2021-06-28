@@ -44,17 +44,16 @@ there are
 To get canopy cover:
 
 ```sh
+rm canopy_cover.txt
 for output in nohup
 do
   grep -E '(path\"\:|ratio)' $output | \
   sed 's/\"//g
-        s/tif/jpg/g
-        s/path//g
-        s/ratio//g
-        s/\/output\///g' > \
-  ${output}.txt
-   grep jpg ${output}.txt >> path.txt
-   grep -v jpg ${output}.txt >> ratio.txt 
+      s/\,//g
+      s/\:/\,/g
+      s/\_mask//g
+      s/\/output\///g' > \
+  canopy_cover.txt
 done 
 ```
 
