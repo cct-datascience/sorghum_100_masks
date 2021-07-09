@@ -22,7 +22,7 @@ python3 to_tif.py ${1}
  
 echo "Processing tif: ${SOURCE_TIF}"
 mv ${SOURCE_DIR}/${SOURCE_TIF} ./
-docker run --rm -v ${PWD}:/input -v ${PWD}:/output chrisatua/development:soilmask --working_space /output /input/${SOURCE_TIF}
+docker run --rm -v ${PWD}:/input -v ${PWD}:/output agdrone/transformer-soilmask:2.4 --working_space /output /input/${SOURCE_TIF}
  
 echo "Converting mask file to png: ${MASK_FILE}"
 python3 to_png.py ${MASK_FILE}
