@@ -85,8 +85,8 @@ A sample of the header and the first few rows of data:
 
 |local_datetime|canopy_cover|species|site|method|
 |--------------|------------|-------|----|------|
-| |0| |2017-04-26__13-59-06-988_mask|Green Canopy Cover Estimation from Field Scanner RGB images
-| |0.737| |2017-05-05__12-28-24-229_mask|Green Canopy Cover Estimation from Field Scanner RGB images
+| |0| |2017-04-26__13-59-06-988_mask|Green Canopy Cover Estimation from Field Scanner RGB images |
+| |0.737| |2017-05-05__12-28-24-229_mask|Green Canopy Cover Estimation from Field Scanner RGB images |
 
 ### References
 
