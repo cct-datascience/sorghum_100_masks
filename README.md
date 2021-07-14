@@ -17,7 +17,8 @@ kaggle competitions download -c sorghum-biomass-prediction
 
 ### Run algorithms
 
-The core masking algorithm is here https://github.com/AgPipeline/transformer-soilmask. It is called in the `mask_file.sh` script (Burnette et al 2018, Burnette et al 2019)
+The core masking algorithm is here https://github.com/AgPipeline/transformer-soilmask.
+It is called in the `mask_file.sh` script (Burnette et al 2018, Burnette et al 2019)
 
 
 ```sh
@@ -31,8 +32,10 @@ done
 To count / check progress:
 
 ```sh
-find . -name *.png | grep -v mask | wc -l
-find . -name *mask.png  | wc -l
+# The total count of source files (not masked)
+find . -name "*.png" | grep -v mask | wc -l
+# The total count of generated mask files
+find . -name "*mask.png" | wc -l
 ```
 
 
@@ -41,33 +44,49 @@ there are
 * 19,442 testing images (according to Kaggle)
 * 324,927 total images (according to `find` + `wc`)
 
-To get canopy cover:
+---
+
+The core canopy cover generating algorithm can be found at https://github.com/AgPipeline/transformer-canopycover.
+It is called in the `canopy_cover_file.sh` script
+
+To generate canopy cover as a set of individual CSV files:
 
 ```sh
-rm canopy_cover.txt
-for output in nohup
+for script in `ls run_canopycover_part*`
 do
-  grep -E '(path\"\:|ratio)' $output | \
-  sed 's/\"//g
-      s/\,//g
-      s/\:/\,/g
-      s/\_mask//g
-      s/\/output\///g' > \
-  canopy_cover.txt
-done 
+  nohup bash $script > nohup${script}.out 2>&1 &
+done
+```
+Similar to above, the following can be used to count / check progress:
+
+```sh
+# The total count of masked image files
+find . -name "*.png" | grep mask | wc -l
+# The total count of the CSV files generated so far
+find . -name "*.csv" | wc -l
 ```
 
-The canopy cover value goes from 0 = no plants to 1 = all plants / no soil. The file is structured with the file name followed by the canopy cover value. Sometimes it appears there are two file names in a row (in which case I suspect the first file threw an error but haven't dug in). 
+To merge the individual CSV files into a single file named `sorghum_biomass_canopycover.csv` in the current folder:
 
-It looks like:
+```bash
+# Merge CSV files - assumes the CSV files can be found in a folder named "data" residing in the current folder
+python3 merge_csv.py --output-file sorghum_biomass_canopycover.csv $PWD/data/ ./
+```
 
-```
-"file","2017-07-26__14-09-58-726.png"
-"ratio",0.8977560763888889
-"file","2017-07-28__12-17-30-214.png"
-"ratio",0.9705598958333334
-"file","2017-07-28__14-30-12-822.png"
-```
+Running the `merge_csv.py` script for the first time will create the output file and add the found data to it.
+Subsequent runs of this script will append the found data to the existing output file.
+
+The canopy cover value goes from 0.0 = no plants to 100.0 = all plants / no soil.
+The file contains timestamp, canopy cover, species, site, and method columns.
+Some of these columns may be empty if there isn't a value available for that column.
+At a minimum, the canopy cover, site, and method columns will be populated.
+
+A sample of the header and the first few rows of data:
+
+|local_datetime|canopy_cover|species|site|method|
+|--------------|------------|-------|----|------|
+| |0| |2017-04-26__13-59-06-988_mask|Green Canopy Cover Estimation from Field Scanner RGB images
+| |0.737| |2017-05-05__12-28-24-229_mask|Green Canopy Cover Estimation from Field Scanner RGB images
 
 ### References
 
