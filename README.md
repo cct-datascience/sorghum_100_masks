@@ -4,7 +4,7 @@ This is based on the Sorghum 100 dataset (Ren et al 2021). Some code that may be
 
 The soil masking algorithm is from Burnette et al (2019) and is documented here: https://github.com/terraref/extractors-stereo-rgb/tree/master/canopycover
 
-The dataset has been used in two Kaggle competitions:
+The Sorghum 100 dataset has been used in two Kaggle competitions:
 
 * 2021: https://www.kaggle.com/c/sorghum-biomass-prediction/overview/iccv-2021-cvppa
 * 2022: https://www.kaggle.com/competitions/sorghum-id-fgvc-9/overview
