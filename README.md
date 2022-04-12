@@ -1,6 +1,8 @@
 # Generate Image Masks and Canopy Cover from Sorghum Images
 
-This is based on the Sorghum 100 dataset (Ren et al 2021). Some code that may be useful for generating masks that separate pixes with plant from soil, and calculates canopy cover as the % of the image that is plant. The soil masking algorithm is from Burnette et al (2019).
+This is based on the Sorghum 100 dataset (Ren et al 2021). Some code that may be useful for generating masks that separate pixes with plant from soil, and calculates canopy cover as the % of the image that is plant. 
+
+The soil masking algorithm is from Burnette et al (2019) and is documented here: https://github.com/terraref/extractors-stereo-rgb/tree/master/canopycover
 
 The dataset has been used in two Kaggle competitions:
 
