@@ -1,8 +1,13 @@
-# Sorghum Biomass Prediction
+# Generate Image Masks and Canopy Cover from Sorghum Images
 
+This is based on the Sorghum 100 dataset (Ren et al 2021). Some code that may be useful for generating masks that separate pixes with plant from soil, and calculates canopy cover as the % of the image that is plant. The soil masking algorithm is from Burnette et al (2019).
 
-https://www.kaggle.com/c/sorghum-biomass-prediction/overview/iccv-2021-cvppa
+The dataset has been used in two Kaggle competitions:
 
+* 2021: https://www.kaggle.com/c/sorghum-biomass-prediction/overview/iccv-2021-cvppa
+* 2022: https://www.kaggle.com/competitions/sorghum-id-fgvc-9/overview
+
+## Proceedure 
 
 ### Download data
 
@@ -94,4 +99,4 @@ Burnette, Maxwell, et al. (2018) "TERRA-REF data processing infrastructure." Pro
 
 Burnette et al (2019) terraref/extractors-stereo-rgb: Season 6 Data Publication (2019) (Version S6_Pub_2019). Zenodo. http://doi.org/10.5281/zenodo.3406304
 
-
+Ren, C., Dulay, J., Rolwes, G., Pauli, D., Shakoor, N., & Stylianou, A. (2021). Multi-resolution outlier pooling for sorghum classification. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 2931-2939).
