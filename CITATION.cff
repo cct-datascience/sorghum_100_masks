@@ -1,0 +1,70 @@
+cff-version: 1.2.0
+title: >-
+  Generate Image Masks and Canopy Cover from Sorghum
+  100 Images
+message: >-
+  If you use this software, please cite it using these metadata.
+type: software
+authors:
+  - given-names: Chris
+    family-names: Schnaufer
+    email: schnaufer@arizona.edu
+    affiliation: University of Arizona
+    orcid: 'https://orcid.org/0000-0002-6150-4558'
+  - given-names: David
+    family-names: LeBauer
+    email: dlebauer@arizona.edu
+    affiliation: University of Arizona
+    orcid: 'https://orcid.org/0000-0001-7228-053X'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.6456476
+    description: DOI for most recent version on Zenodo
+repository-code: >-
+  https://github.com/cct-datascience/sorghum_100_masks
+license: BSD-3-Clause
+references:
+  - authors:
+      - given-names: Max
+        family-names: Burnette
+        affiliation: NCSA
+      - given-names: David
+        family-names: LeBauer
+        affiliation: University of Arizona
+      - given-names: Zongyang
+        family-names: Li
+      - given-names: Wei
+        family-names: Qin
+      - given-names: Solmaz
+        family-names: Hajmohammadi
+      - given-names: Craig
+        family-names: Willis
+        affiliation: University of Illinois
+      - given-names: Sidike
+        family-names: Paheding
+        affiliation: Saint Louis University
+      - given-names: Nick
+        family-names: Heyek
+        affiliation: University of Illinois
+    version: S6_Pub_2019
+    type: software
+    title: terraref/extractors-stereo-rgb: Season 6 Data Publication (2019) (Version S6_Pub_2019)
+    date-released: 2019-09-12
+    repository-code: https://github.com/terraref/extractors-stereo-rgb
+    license: BSD-3-Clause
+  - authors:
+    - given-names: Chris
+      family-names: Schnaufer
+      email: schnaufer@arizona.edu
+      affiliation: University of Arizona
+      orcid: 'https://orcid.org/0000-0002-6150-4558'
+    - given-names: David
+      family-names: LeBauer
+      email: dlebauer@arizona.edu
+      affiliation: University of Arizona
+      orcid: 'https://orcid.org/0000-0001-7228-053X'
+    title: "An open, scalable, and flexible framework for automated aerial measurement of field experiments"
+    type: "conference-paper"
+    conference:
+      name: "Proc. SPIE 11414, Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping V, 114140A"
+      date-start: 2020-05-19
