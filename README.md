@@ -101,4 +101,6 @@ Burnette, Maxwell, et al. (2018) "TERRA-REF data processing infrastructure." Pro
 
 Burnette et al (2019) terraref/extractors-stereo-rgb: Season 6 Data Publication (2019) (Version S6_Pub_2019). Zenodo. http://doi.org/10.5281/zenodo.3406304
 
+Christophe Schnaufer, Julian L. Pistorius, and David S. LeBauer "An open, scalable, and flexible framework for automated aerial measurement of field experiments", Proc. SPIE 11414, Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping V, 114140A (19 May 2020); https://doi.org/10.1117/12.2560008
+
 Ren, C., Dulay, J., Rolwes, G., Pauli, D., Shakoor, N., & Stylianou, A. (2021). Multi-resolution outlier pooling for sorghum classification. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 2931-2939).
