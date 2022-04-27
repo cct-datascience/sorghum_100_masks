@@ -1,4 +1,4 @@
-# Generate Image Masks and Canopy Cover from Sorghum Images
+# Generate Image Masks and Canopy Cover from Sorghum 100 Images
 
 This is based on the Sorghum 100 dataset (Ren et al 2021). Some code that may be useful for generating masks that separate pixes with plant from soil, and calculates canopy cover as the % of the image that is plant. 
 
