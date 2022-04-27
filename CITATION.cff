@@ -48,7 +48,7 @@ references:
         affiliation: University of Illinois
     version: S6_Pub_2019
     type: software
-    title: terraref/extractors-stereo-rgb: Season 6 Data Publication (2019) (Version S6_Pub_2019)
+    title: "terraref/extractors-stereo-rgb: Season 6 Data Publication (2019) (Version S6_Pub_2019)"
     date-released: 2019-09-12
     repository-code: https://github.com/terraref/extractors-stereo-rgb
     license: BSD-3-Clause
